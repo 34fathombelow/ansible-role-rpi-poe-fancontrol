@@ -1,38 +1,56 @@
-Role Name
-=========
+# Ansible Role: Raspberry Pi PoE-hat fan control 
 
-A brief description of the role goes here.
+An Ansible role that configures Raspberry Pi PoE Fan speeds.  The Fans are controlled by the 
+Rasperry Pi via I2C.  They turn on and off depending on the temperature of the processor. One 
+can manipulate when the fan turns on/off and at which temperature the fan speed will ramp up.
+This is extremely useful when using Rpi's in a cluster.
 
-Requirements
-------------
+## Requirements
+Must be running an up-to-date version of RaspberryPi OS. A reboot is required after running 
+the role, the role **will not** perform a reboot.
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+## Role Variables
+Default settings are set by default (see `defaults/main.yml`)
 
-Role Variables
---------------
+```
+# Default fan temperature and temperature deltas
+# temperatures are in millicelcius, 40000 == 40C
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+# Temperature at which fan turns on | Temp delta which fan turns off.
+poe_temp0: poe_fan_temp0=40000,poe_fan_temp0_hyst=2000
 
-Dependencies
-------------
+# Temperature at which fan speeds up | Temp delta which fan slows down.
+poe_temp1: poe_fan_temp1=45000,poe_fan_temp1_hyst=2000
 
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
+# Temperature at which fan speeds up | Temp delta which fan slows down.
+poe_temp2: poe_fan_temp2=50000,poe_fan_temp2_hyst=2000
 
-Example Playbook
-----------------
+# Temperature at which fan speeds up | Temp delta which fan slows down.
+poe_temp3: poe_fan_temp3=55000,poe_fan_temp3_hyst=5000
+```
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
 
-    - hosts: servers
-      roles:
-         - { role: username.rolename, x: 42 }
+## Dependencies
 
-License
--------
+None.
+
+## Example Playbook
+
+```yaml
+- hosts: pis
+   
+  vars:
+    poe_temp0: poe_fan_temp0=48000,poe_fan_temp0_hyst=2000
+    poe_temp1: poe_fan_temp0=55000,poe_fan_temp0_hyst=2000
+    poe_temp2: poe_fan_temp0=60000,poe_fan_temp0_hyst=2000
+    poe_temp3: poe_fan_temp0=65000,poe_fan_temp0_hyst=5000
+      
+  roles:
+    - 34fathombelow.rpi-poe-fancontrol 
+```
+
+## License
 
 BSD
 
-Author Information
-------------------
-
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+                                                                                     
