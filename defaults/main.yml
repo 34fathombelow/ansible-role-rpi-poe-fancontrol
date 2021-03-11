@@ -1,6 +1,15 @@
 ---
-# defaults file for rpi_poe_fancontrol
-poe_temp0: 48000,poe_fan_temp0_hyst=2000
-poe_temp1: 55000,poe_fan_temp1_hyst=2000
-poe_temp2: 60000,poe_fan_temp2_hyst=2000
-poe_temp3: 65000,poe_fan_temp3_hyst=5000
+# Default fan temperature and temperature deltas
+# temperatures are in millicelcius, 40000 == 40C
+
+# Temperature at which fan turns on | Temp delta which fan turns off.
+poe_temp0: poe_fan_temp0=40000,poe_fan_temp0_hyst=2000
+
+# Temperature at which fan speeds up | Temp delta which fan slows down.
+poe_temp1: poe_fan_temp1=45000,poe_fan_temp1_hyst=2000
+
+# Temperature at which fan speeds up | Temp delta which fan slows down.
+poe_temp2: poe_fan_temp2=50000,poe_fan_temp2_hyst=2000
+
+# Temperature at which fan speeds up | Temp delta which fan slows down.
+poe_temp3: poe_fan_temp3=55000,poe_fan_temp3_hyst=5000
