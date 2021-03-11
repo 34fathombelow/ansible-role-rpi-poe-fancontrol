@@ -3,7 +3,7 @@ galaxy_info:
   role_name: rpi-poe-fancontrol
   author: 34fathombelow
   description: Controls the fan speeds on RaspberryPi Poe Hats
-  license: GPLv2
+  license: MIT
   min_ansible_version: 2.4
   platforms:
     - name: Debian
