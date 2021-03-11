@@ -46,7 +46,7 @@ None.
     poe_temp3: poe_fan_temp0=65000,poe_fan_temp0_hyst=5000
       
   roles:
-    - 34fathombelow.rpi-poe-fancontrol 
+    - 34fathombelow.rpi_poe_fancontrol 
 ```
 
 ## License
