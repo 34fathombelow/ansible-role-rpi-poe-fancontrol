@@ -1,4 +1,4 @@
-# Ansible Role: Raspberry Pi PoE-hat fan control 
+# Ansible Role: Raspberry Pi PoE fan control 
 
 An Ansible role that configures Raspberry Pi PoE Fan speeds.  The Fans are controlled by the 
 Rasperry Pi via I2C.  They turn on and off depending on the temperature of the processor. One 
@@ -51,6 +51,6 @@ None.
 
 ## License
 
-BSD
+MIT
 
                                                                                      
