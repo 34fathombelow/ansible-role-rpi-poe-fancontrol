@@ -1,0 +1,6 @@
+---
+# defaults file for rpi_poe_fancontrol
+poe_temp0: 48000,poe_fan_temp0_hyst=2000
+poe_temp1: 55000,poe_fan_temp1_hyst=2000
+poe_temp2: 60000,poe_fan_temp2_hyst=2000
+poe_temp3: 65000,poe_fan_temp3_hyst=5000
