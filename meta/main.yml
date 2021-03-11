@@ -1,6 +1,6 @@
 ---
 galaxy_info:
-  role_name: rpi-poe-fancontrol
+  role_name: rpi_poe_fancontrol
   author: 34fathombelow
   description: Controls the fan speeds on RaspberryPi Poe Hats
   license: MIT
