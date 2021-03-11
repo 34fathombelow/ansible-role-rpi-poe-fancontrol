@@ -7,7 +7,7 @@
   with_items:
     - { regexp: '^# PoE Hat Fan Speeds', line: '# PoE Hat Fan Speeds' }
     - { regexp: '^dtoverlay=rpi-poe', line: 'dtoverlay=rpi-poe' }
-    - { regexp: '^dtparam=poe_fan_temp0', line: '{{ poe_temp0 }}' }
-    - { regexp: '^dtparam=poe_fan_temp1', line: '{{ poe_temp1 }}' }
-    - { regexp: '^dtparam=poe_fan_temp2', line: '{{ poe_temp2 }}' }
-    - { regexp: '^dtparam=poe_fan_temp3', line: '{{ poe_temp3 }}' }
+    - { regexp: '^dtparam=poe_fan_temp0', line: 'dtparam={{ poe_temp0 }}' }
+    - { regexp: '^dtparam=poe_fan_temp1', line: 'dtparam={{ poe_temp1 }}' }
+    - { regexp: '^dtparam=poe_fan_temp2', line: 'dtparam={{ poe_temp2 }}' }
+    - { regexp: '^dtparam=poe_fan_temp3', line: 'dtparam={{ poe_temp3 }}' }
