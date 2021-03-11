@@ -4,6 +4,7 @@
     path: /boot/config.txt
     regexp: "{{ item.regexp }}"
     line: "{{ item.line }}"
+    state: present
   with_items:
     - { regexp: '^# PoE Hat Fan Speeds', line: '# PoE Hat Fan Speeds' }
     - { regexp: '^dtoverlay=rpi-poe', line: 'dtoverlay=rpi-poe' }
