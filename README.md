@@ -41,9 +41,9 @@ None.
    
   vars:
     poe_temp0: poe_fan_temp0=48000,poe_fan_temp0_hyst=2000
-    poe_temp1: poe_fan_temp0=55000,poe_fan_temp0_hyst=2000
-    poe_temp2: poe_fan_temp0=60000,poe_fan_temp0_hyst=2000
-    poe_temp3: poe_fan_temp0=65000,poe_fan_temp0_hyst=5000
+    poe_temp1: poe_fan_temp1=55000,poe_fan_temp1_hyst=2000
+    poe_temp2: poe_fan_temp2=60000,poe_fan_temp2_hyst=2000
+    poe_temp3: poe_fan_temp3=65000,poe_fan_temp3_hyst=5000
       
   roles:
     - 34fathombelow.rpi_poe_fancontrol 
